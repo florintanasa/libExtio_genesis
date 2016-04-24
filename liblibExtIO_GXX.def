@@ -1,0 +1,75 @@
+EXPORTS
+    ActivateTx = ActivateTx@8 @1
+    ActivateTx@8 @2
+    CloseHW = CloseHW@0 @3
+    CloseHW@0 @4
+    EnableLineMic = EnableLineMic@4 @5
+    EnableLineMic@4 @6
+    EnablePA = EnablePA@4 @7
+    EnablePA@4 @8
+    GetFilters = GetFilters@12 @9
+    GetFilters@12 @10
+    GetHWLO = GetHWLO@0 @11
+    GetHWLO@0 @12
+    GetHWSR = GetHWSR@0 @13
+    GetHWSR@0 @14
+    GetMode = GetMode@0 @15
+    GetMode@0 @16
+    GetStatus = GetStatus@0 @17
+    GetStatus@0 @18
+    GetTune = GetTune@0 @19
+    GetTune@0 @20
+    HideGUI = HideGUI@0 @21
+    HideGUI@0 @22
+    IFLimitsChanged = IFLimitsChanged@8 @23
+    IFLimitsChanged@8 @24
+    InitHW = InitHW@12 @25
+    InitHW@12 @26
+    ModeChanged = ModeChanged@4 @27
+    ModeChanged@4 @28
+    OpenHW = OpenHW@0 @29
+    OpenHW@0 @30
+    RawDataReady = RawDataReady@16 @31
+    RawDataReady@16 @32
+    SetCallback = SetCallback@4 @33
+    SetCallback@4 @34
+    SetHWLO = SetHWLO@4 @35
+    SetHWLO@4 @36
+    SetKeyerMode = SetKeyerMode@4 @37
+    SetKeyerMode@4 @38
+    SetKeyerRatio = SetKeyerRatio@4 @39
+    SetKeyerRatio@4 @40
+    SetModeRxTx = SetModeRxTx@4 @41
+    SetModeRxTx@4 @42
+    SetPreamp = SetPreamp@4 @43
+    SetPreamp@4 @44
+    SetWpm = SetWpm@4 @45
+    SetWpm@4 @46
+    ShowGUI = ShowGUI@0 @47
+    ShowGUI@0 @48
+    StartHW = StartHW@4 @49
+    StartHW@4 @50
+    StopHW = StopHW@0 @51
+    StopHW@0 @52
+    TuneChanged = TuneChanged@4 @53
+    TuneChanged@4 @54
+    VersionInfo = VersionInfo@12 @55
+    VersionInfo@12 @56
+    hid_close @57
+    hid_enumerate @58
+    hid_error @59
+    hid_exit @60
+    hid_free_enumeration @61
+    hid_get_feature_report @62
+    hid_get_indexed_string @63
+    hid_get_manufacturer_string @64
+    hid_get_product_string @65
+    hid_get_serial_number_string @66
+    hid_init @67
+    hid_open @68
+    hid_open_path @69
+    hid_read @70
+    hid_read_timeout @71
+    hid_send_feature_report @72
+    hid_set_nonblocking @73
+    hid_write @74

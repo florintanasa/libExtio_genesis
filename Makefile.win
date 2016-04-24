@@ -1,0 +1,57 @@
+# Project: libExtIO_GXX
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = bsd_string.o cmdbase.o cmdpacket.o extio.o genesis.o genesis_observer.o hid_util.o main.o si570.o hid.o
+LINKOBJ  = bsd_string.o cmdbase.o cmdpacket.o extio.o genesis.o genesis_observer.o hid_util.o main.o si570.o hid.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -lsetupapi -m32 -lobjc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = libExtIO_GXX.dll
+CXXFLAGS = $(CXXINCS) -m32 -std=gnu++11 -DBUILDING_DLL=1
+CFLAGS   = $(INCS) -m32 -std=gnu++11 -DBUILDING_DLL=1
+RM       = rm.exe -f
+DEF      = liblibExtIO_GXX.def
+STATIC   = liblibExtIO_GXX.a
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN) $(DEF) $(STATIC)
+
+$(BIN): $(LINKOBJ)
+	$(CPP) -shared $(LINKOBJ) -o $(BIN) $(LIBS) -Wl,--output-def,$(DEF),--out-implib,$(STATIC),--add-stdcall-alias
+
+bsd_string.o: bsd_string.c
+	$(CC) -c bsd_string.c -o bsd_string.o $(CFLAGS)
+
+cmdbase.o: cmdbase.cpp
+	$(CPP) -c cmdbase.cpp -o cmdbase.o $(CXXFLAGS)
+
+cmdpacket.o: cmdpacket.cpp
+	$(CPP) -c cmdpacket.cpp -o cmdpacket.o $(CXXFLAGS)
+
+extio.o: extio.cpp
+	$(CPP) -c extio.cpp -o extio.o $(CXXFLAGS)
+
+genesis.o: genesis.cpp
+	$(CPP) -c genesis.cpp -o genesis.o $(CXXFLAGS)
+
+genesis_observer.o: genesis_observer.cpp
+	$(CPP) -c genesis_observer.cpp -o genesis_observer.o $(CXXFLAGS)
+
+hid_util.o: hid_util.cpp
+	$(CPP) -c hid_util.cpp -o hid_util.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+si570.o: si570.c
+	$(CC) -c si570.c -o si570.o $(CFLAGS)
+
+hid.o: hid.c
+	$(CC) -c hid.c -o hid.o $(CFLAGS)
