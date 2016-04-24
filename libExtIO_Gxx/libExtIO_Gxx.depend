@@ -1,0 +1,128 @@
+# depslib dependency file v1.0
+1461389088 source:c:\git\libextio_genesis\bsd_string.c
+	<stdio.h>
+	<sys/types.h>
+
+1461493360 source:c:\git\libextio_genesis\cmdbase.cpp
+	<unistd.h>
+	<stdio.h>
+	<string.h>
+	<pthread.h>
+	<string>
+	<algorithm>
+	<time.h>
+	<pthread_time.h>
+	"cmdbase.h"
+	"si570.h"
+
+1461389088 c:\git\libextio_genesis\cmdbase.h
+	"hid_util.h"
+	"cmdpacket.h"
+	"genesis_observer.h"
+
+1461389088 c:\git\libextio_genesis\hid_util.h
+
+1461389088 c:\git\libextio_genesis\cmdpacket.h
+	"hid_util.h"
+
+1461389088 c:\git\libextio_genesis\genesis_observer.h
+
+1461389088 c:\git\libextio_genesis\si570.h
+	<inttypes.h>
+
+1461389088 source:c:\git\libextio_genesis\cmdpacket.cpp
+	<stdio.h>
+	<string.h>
+	"cmdpacket.h"
+	<ctype.h>
+
+1461505375 source:c:\git\libextio_genesis\extio.cpp
+	<string.h>
+	<string>
+	<stdio.h>
+	"bsd_string.h"
+	"genesis.h"
+	"cmdbase.h"
+	"extio.h"
+
+1461389088 c:\git\libextio_genesis\bsd_string.h
+
+1461389088 c:\git\libextio_genesis\genesis.h
+	<string>
+	<vector>
+	"cmdbase.h"
+	"simpleini-master/SimpleIni.h"
+
+1461389088 c:\git\libextio_genesis\simpleini-master\simpleini.h
+	<cstring>
+	<cstdlib>
+	<string>
+	<map>
+	<list>
+	<algorithm>
+	<stdio.h>
+	<iostream>
+	<cassert>
+	<unicode/ustring.h>
+	<wchar.h>
+	"ConvertUTF.h"
+	<unicode/ucnv.h>
+	<windows.h>
+	<mbstring.h>
+
+1461389088 c:\git\libextio_genesis\simpleini-master\convertutf.h
+
+1461484948 c:\git\libextio_genesis\extio.h
+	<stdbool.h>
+
+1461389088 source:c:\git\libextio_genesis\genesis.cpp
+	<string>
+	<iostream>
+	<fstream>
+	"genesis.h"
+	"cmdbase.h"
+	"g59cmd.h"
+	"g11cmd.h"
+	"simpleini-master/SimpleIni.h"
+
+1461389088 c:\git\libextio_genesis\g59cmd.h
+	"cmdbase.h"
+
+1461389088 c:\git\libextio_genesis\g11cmd.h
+	"cmdbase.h"
+
+1461439602 source:c:\git\libextio_genesis\genesis_observer.cpp
+	<stdio.h>
+	"genesis_observer.h"
+
+1433169204 source:c:\git\libextio_genesis\hid.c
+	<windows.h>
+	<ntdef.h>
+	<winbase.h>
+	<ntdef.h>
+	<setupapi.h>
+	<winioctl.h>
+	<hidsdi.h>
+	<stdio.h>
+	<stdlib.h>
+	"hidapi.h"
+
+1433169204 c:\git\libextio_genesis\hidapi.h
+	<wchar.h>
+
+1461389088 source:c:\git\libextio_genesis\hid_util.cpp
+	<pthread.h>
+	"hidapi.h"
+	"hid_util.h"
+
+1461389088 source:c:\git\libextio_genesis\main.cpp
+	<unistd.h>
+	<stdio.h>
+	"si570.h"
+
+1461389088 source:c:\git\libextio_genesis\si570.c
+	<inttypes.h>
+	<limits.h>
+	<stdio.h>
+	<string.h>
+

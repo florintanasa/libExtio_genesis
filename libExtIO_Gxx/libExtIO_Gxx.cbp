@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libExtIO_Gxx" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/libExtIO_Gxx" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-w" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/libExtIO_Gxx" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-w" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add option="-Wl,--kill-at" />
+			<Add library="setupapi" />
+		</Linker>
+		<Unit filename="../bsd_string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../bsd_string.h" />
+		<Unit filename="../cmdbase.cpp" />
+		<Unit filename="../cmdbase.h" />
+		<Unit filename="../cmdpacket.cpp" />
+		<Unit filename="../cmdpacket.h" />
+		<Unit filename="../extio.cpp" />
+		<Unit filename="../extio.h" />
+		<Unit filename="../g11cmd.h" />
+		<Unit filename="../g59cmd.h" />
+		<Unit filename="../genesis.cpp" />
+		<Unit filename="../genesis.h" />
+		<Unit filename="../genesis_observer.cpp" />
+		<Unit filename="../genesis_observer.h" />
+		<Unit filename="../hid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../hid_util.cpp" />
+		<Unit filename="../hid_util.h" />
+		<Unit filename="../hidapi.h" />
+		<Unit filename="../main.cpp" />
+		<Unit filename="../si570.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../si570.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
