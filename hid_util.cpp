@@ -1,3 +1,10 @@
+#ifdef _WIN32
+#include <windows.h>
+#endif
+#ifdef _WIN32
+	// Thanks Microsoft, but I know how to use strncpy().
+	#pragma warning(disable:4996)
+#endif
 #include <pthread.h>
 #include "hidapi.h"
 #include "hid_util.h"

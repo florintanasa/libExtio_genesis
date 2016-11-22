@@ -9,14 +9,14 @@
 
 #define LOG_ERR(...) {fprintf(stderr,__VA_ARGS__);}
 #define LOG_INFO(...) {fprintf(stderr,__VA_ARGS__);}
-
+#define DEBUG
 #ifdef DEBUG
 #define LOG_DEBUG(...) {fprintf(stderr,__VA_ARGS__);}
 #else
 #define LOG_DEBUG(...) {}
 #endif
 
-//#define DO_ANNOYING
+#define DO_ANNOYING
 #ifdef DO_ANNOYING
 #define LOG_ANNOYING(...) {fprintf(stderr,__VA_ARGS__);fflush(stderr);}
 #else
@@ -317,7 +317,7 @@ void __stdcall __declspec(dllexport) GetFilters(int& loCut, int& hiCut, int& pit
 {
     LOG_DEBUG("%s:%d\n",__FUNCTION__,__LINE__);
 }
-//
+
 int __stdcall __declspec(dllexport) SetModeRxTx(int modeRxTx)
 {
     LOG_DEBUG("%s:%d modeRxTx: %d\n",__FUNCTION__,__LINE__, modeRxTx);

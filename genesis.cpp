@@ -1,3 +1,6 @@
+#ifdef _WIN32
+#include <windows.h>
+#endif
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -8,8 +11,9 @@
 #include "g11cmd.h"
 #include "simpleini-master/SimpleIni.h"
 
+
 #define LOG_ERR(...) {fprintf(stderr,__VA_ARGS__);}
-#define LOG_INFO(...) //{fprintf(stderr,__VA_ARGS__);}
+#define LOG_INFO(...) {fprintf(stderr,__VA_ARGS__);}
 /**************************************************************/
 /** Base Class Genesis
 /**************************************************************/
@@ -49,8 +53,8 @@ void Genesis::register_observer(Genesis_Observer *p_observer)
 }
 
 std::string Genesis::GetMake()
-{ 
-    return std::string("Genesis SDR"); 
+{
+    return std::string("Genesis SDR");
 }
 
 int Genesis::GetVendorId()
@@ -65,7 +69,7 @@ bool Genesis::Init()
         m_initialized = mp_cmd->Init(m_vendorid, m_productid);
     }
 
-    LoadConfigFile();
+ //   LoadConfigFile();
     bool hasmultiple = false;
     m_hasGPA10 = m_ini.GetBoolValue("g59","hasGPA10", true, &hasmultiple);
     m_ini.SetBoolValue("g59","hasGPA10",m_hasGPA10,"# true if PA10 enabled", true);
@@ -98,7 +102,7 @@ bool Genesis::Close()
 {
     if (m_initialized)
     {
-        SaveConfigFile();
+  //      SaveConfigFile();
         m_initialized = !mp_cmd->Close();
     }
 
@@ -138,7 +142,7 @@ int Genesis::FindBand(long freq)
         if((it->low_freq <= freq) && (it->high_freq >= freq))
         {
             index = it->index;
-            //LOG_INFO("%s:%d Found Band: Found %d, freq %ld, low %ld, high %ld\n",__FUNCTION__,__LINE__,index, freq, it->low_freq, it->high_freq);
+            LOG_INFO("%s:%d Found Band: Found %d, freq %ld, low %ld, high %ld\n",__FUNCTION__,__LINE__,index, freq, it->low_freq, it->high_freq);
             break;
         }
     }
@@ -302,50 +306,50 @@ bool Genesis::SaveConfigFile()
 /**************************************************************/
 const Genesis::BandFilters_t G59::ms_g59_bandfilters(
 {
-    { 
+    {
         1,
         "160m",
         1800000,
         2000000
     },
 
-    { 
+    {
         2,
         "80m",
         3500000,
         4000000
     },
-    { 
+    {
         3,
         "60-40m",
         5403500,
         7300000
     },
-    { 
+    {
         4,
         "30-20m",
         10100000,
         14350000
     },
-    { 
+    {
         5,
         "17-15m",
         18068000,
         21450000
     },
-    { 
+    {
         6,
         "12-10m",
         24890000,
         29700000
     },
-    { 
+    {
         7,
         "6m",
         50000000,
         54000000
     },
-    { 
+    {
         0,
         "gen",
         0,
@@ -353,7 +357,7 @@ const Genesis::BandFilters_t G59::ms_g59_bandfilters(
     }
 });
 
-G59::G59() 
+G59::G59()
     : Genesis(0x1970)
 {
     mp_cmd = new G59Cmd();
@@ -435,7 +439,7 @@ const Genesis::BandFilters_t G11::ms_g11_bandfilters(
     }
 });
 
-G11::G11() 
+G11::G11()
     : Genesis(0x1971)
 {
     mp_cmd = new G11Cmd();

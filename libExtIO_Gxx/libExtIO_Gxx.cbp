@@ -49,6 +49,7 @@
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,--kill-at" />
+			<Add option="-mwindows" />
 			<Add library="setupapi" />
 		</Linker>
 		<Unit filename="../bsd_string.c">
@@ -78,6 +79,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../si570.h" />
+		<Unit filename="../simpleini-master/ConvertUTF.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../simpleini-master/ConvertUTF.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

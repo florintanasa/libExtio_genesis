@@ -2,14 +2,44 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="..\hid_util.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\simpleini-master\ConvertUTF.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1186" topLine="0" />
+			<Cursor1 position="1715" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\extio.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="680" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="..\cmdpacket.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="170" topLine="15" />
 		</Cursor>
 	</File>
 	<File name="..\genesis.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1247" topLine="39" />
+			<Cursor1 position="8" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\hid.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="664" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\hid_util.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\hidapi.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="126" />
+		</Cursor>
+	</File>
+	<File name="..\cmdbase.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1334" topLine="719" />
 		</Cursor>
 	</File>
 	<File name="..\extio.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,14 +47,14 @@
 			<Cursor1 position="1929" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\extio.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\cmdbase.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3743" topLine="114" />
+			<Cursor1 position="3093" topLine="91" />
 		</Cursor>
 	</File>
-	<File name="..\cmdpacket.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\main.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1939" topLine="70" />
+			<Cursor1 position="135" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="..\si570.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -32,14 +62,9 @@
 			<Cursor1 position="794" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\cmdbase.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\genesis.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3093" topLine="91" />
-		</Cursor>
-	</File>
-	<File name="..\cmdbase.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19458" topLine="725" />
+			<Cursor1 position="1395" topLine="19" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
