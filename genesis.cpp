@@ -69,7 +69,7 @@ bool Genesis::Init()
         m_initialized = mp_cmd->Init(m_vendorid, m_productid);
     }
 
- //   LoadConfigFile();
+    LoadConfigFile();
     bool hasmultiple = false;
     m_hasGPA10 = m_ini.GetBoolValue("g59","hasGPA10", true, &hasmultiple);
     m_ini.SetBoolValue("g59","hasGPA10",m_hasGPA10,"# true if PA10 enabled", true);
@@ -102,7 +102,7 @@ bool Genesis::Close()
 {
     if (m_initialized)
     {
-  //      SaveConfigFile();
+        SaveConfigFile();
         m_initialized = !mp_cmd->Close();
     }
 
@@ -251,7 +251,7 @@ bool Genesis::LoadConfigFile()
     m_ini.SetMultiLine(false);
 
     // load the file
-    std::string homepath = getenv("HOME");
+    std::string homepath = getenv("HomePath");
     std::string inifilepath((homepath + "/" + INIFILENAME).c_str());
     std::ifstream instream;
     instream.open(inifilepath.c_str(), std::ifstream::in | std::ifstream::binary);
@@ -280,7 +280,7 @@ bool Genesis::SaveConfigFile()
     m_ini.SetMultiLine(false);
 
     // load the file
-    std::string homepath = getenv("HOME");
+    std::string homepath = getenv("HomePath");
     std::string inifilepath((homepath + "/" + INIFILENAME).c_str());
     std::ofstream outstream;
     outstream.open(inifilepath.c_str(), std::ofstream::out | std::ofstream::binary  | std::ofstream::trunc);
