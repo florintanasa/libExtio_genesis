@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
-	<ActiveTarget name="Debug" />
-	<File name="..\simpleini-master\ConvertUTF.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1715" topLine="0" />
-		</Cursor>
-	</File>
+	<ActiveTarget name="Release" />
 	<File name="..\extio.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="680" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="..\cmdpacket.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="170" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="..\genesis.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8" topLine="0" />
+			<Cursor1 position="5707" topLine="365" />
 		</Cursor>
 	</File>
 	<File name="..\hid.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -27,19 +12,9 @@
 			<Cursor1 position="664" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\hid_util.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="..\hidapi.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="126" />
-		</Cursor>
-	</File>
-	<File name="..\cmdbase.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1334" topLine="719" />
 		</Cursor>
 	</File>
 	<File name="..\extio.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -47,9 +22,44 @@
 			<Cursor1 position="1929" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="..\g11cmd.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="907" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="..\genesis.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7878" topLine="286" />
+		</Cursor>
+	</File>
+	<File name="..\genesis.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1409" topLine="22" />
+		</Cursor>
+	</File>
+	<File name="..\cmdpacket.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="291" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\cmdbase.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="18768" topLine="714" />
+		</Cursor>
+	</File>
+	<File name="..\hid_util.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\cmdpacket.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1399" topLine="54" />
+		</Cursor>
+	</File>
 	<File name="..\cmdbase.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3093" topLine="91" />
+			<Cursor1 position="121" topLine="30" />
 		</Cursor>
 	</File>
 	<File name="..\main.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -62,9 +72,9 @@
 			<Cursor1 position="794" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\genesis.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\simpleini-master\ConvertUTF.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1395" topLine="19" />
+			<Cursor1 position="1715" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

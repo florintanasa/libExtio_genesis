@@ -156,13 +156,13 @@
 1478973148 d:\git\libextio_genesis\si570.h
 	<inttypes.h>
 
-1478973148 source:d:\git\libextio_genesis\cmdpacket.cpp
+1479840275 source:d:\git\libextio_genesis\cmdpacket.cpp
 	<stdio.h>
 	<string.h>
 	"cmdpacket.h"
 	<ctype.h>
 
-1478973148 source:d:\git\libextio_genesis\extio.cpp
+1479840111 source:d:\git\libextio_genesis\extio.cpp
 	<string.h>
 	<string>
 	<stdio.h>
@@ -201,7 +201,8 @@
 1478973148 d:\git\libextio_genesis\extio.h
 	<stdbool.h>
 
-1478973148 source:d:\git\libextio_genesis\genesis.cpp
+1479843773 source:d:\git\libextio_genesis\genesis.cpp
+	<windows.h>
 	<string>
 	<iostream>
 	<fstream>
@@ -214,7 +215,7 @@
 1478973148 d:\git\libextio_genesis\g59cmd.h
 	"cmdbase.h"
 
-1478973148 d:\git\libextio_genesis\g11cmd.h
+1479933695 d:\git\libextio_genesis\g11cmd.h
 	"cmdbase.h"
 
 1478973148 source:d:\git\libextio_genesis\genesis_observer.cpp
@@ -235,7 +236,7 @@
 1478973148 d:\git\libextio_genesis\hidapi.h
 	<wchar.h>
 
-1479033202 source:d:\git\libextio_genesis\hid_util.cpp
+1479839910 source:d:\git\libextio_genesis\hid_util.cpp
 	<windows.h>
 	<pthread.h>
 	"hidapi.h"
@@ -251,4 +252,8 @@
 	<limits.h>
 	<stdio.h>
 	<string.h>
+
+1478973148 source:d:\git\libextio_genesis\simpleini-master\convertutf.c
+	"ConvertUTF.h"
+	<stdio.h>
 
