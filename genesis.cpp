@@ -11,9 +11,8 @@
 #include "g11cmd.h"
 #include "simpleini-master/SimpleIni.h"
 
-
 #define LOG_ERR(...) {fprintf(stderr,__VA_ARGS__);}
-#define LOG_INFO(...) {fprintf(stderr,__VA_ARGS__);}
+#define LOG_INFO(...) //{fprintf(stderr,__VA_ARGS__);}
 /**************************************************************/
 /** Base Class Genesis
 /**************************************************************/
@@ -28,7 +27,9 @@ Genesis::Genesis(int productid)
     ,m_productid(productid)
     ,m_initialized(false)
     ,m_hasMicPreamp(true)
+    ,m_hasPTTOut(false)
     ,m_hasGPA10(true)
+    ,m_hasSECRX(false)
     ,m_tx_dropout_ms(0)
     ,m_keyer_mode(CmdBase::K_MODE_NONE)
     ,m_keyer_speed(13)
@@ -53,8 +54,8 @@ void Genesis::register_observer(Genesis_Observer *p_observer)
 }
 
 std::string Genesis::GetMake()
-{
-    return std::string("Genesis SDR");
+{ 
+    return std::string("Genesis SDR"); 
 }
 
 int Genesis::GetVendorId()
@@ -73,11 +74,19 @@ bool Genesis::Init()
     bool hasmultiple = false;
     m_hasGPA10 = m_ini.GetBoolValue("g59","hasGPA10", true, &hasmultiple);
     m_ini.SetBoolValue("g59","hasGPA10",m_hasGPA10,"# true if PA10 enabled", true);
+    m_hasSECRX = m_ini.GetBoolValue("g59","hasSECRX", false, &hasmultiple);
+    m_ini.SetBoolValue("g59","hasSECRX",m_hasSECRX,"# true if SECRX enabled", true);
     m_hasMicPreamp = m_ini.GetBoolValue("g59","hasMicPreamp", true, &hasmultiple);
     m_ini.SetBoolValue("g59","hasMicPreamp",m_hasMicPreamp,"# true if Mic Preamp enabled", true);
+    m_hasPTTOut = m_ini.GetBoolValue("g59","hasPTTOut", false, &hasmultiple);
+    m_ini.SetBoolValue("g59","hasPTTOut",m_hasPTTOut,"# true to enable EXT PTT", true);
+
 
     //enable the GPA10 if it is available
     mp_cmd->pa10(m_hasGPA10);
+
+    //Set RX to second input if it is available
+    mp_cmd->sec_rx2(m_hasSECRX);
 
     //setup the keyer
     m_keyer_ratio = m_ini.GetDoubleValue("g59", "keyerRatio",3.0, &hasmultiple);
@@ -142,7 +151,7 @@ int Genesis::FindBand(long freq)
         if((it->low_freq <= freq) && (it->high_freq >= freq))
         {
             index = it->index;
-            LOG_INFO("%s:%d Found Band: Found %d, freq %ld, low %ld, high %ld\n",__FUNCTION__,__LINE__,index, freq, it->low_freq, it->high_freq);
+            //LOG_INFO("%s:%d Found Band: Found %d, freq %ld, low %ld, high %ld\n",__FUNCTION__,__LINE__,index, freq, it->low_freq, it->high_freq);
             break;
         }
     }
@@ -153,6 +162,12 @@ bool Genesis::SetTx(bool tx_enable)
 {
     if (tx_enable)
     {
+        //enable the PTT Out line if needed
+        if (m_hasPTTOut)
+        {
+            mp_cmd->ptt_cmd(true);
+        }
+
         //enable the Mic Preamp if it is available
         if (m_hasMicPreamp)
         {
@@ -169,6 +184,8 @@ bool Genesis::SetTx(bool tx_enable)
         mp_cmd->tx(false);
         //disable the Mic Preamp
         mp_cmd->line_mic(false);
+        //disable the PTT Line
+        mp_cmd->ptt_cmd(false);
     }
 
     return true;
@@ -306,50 +323,50 @@ bool Genesis::SaveConfigFile()
 /**************************************************************/
 const Genesis::BandFilters_t G59::ms_g59_bandfilters(
 {
-    {
+    { 
         1,
         "160m",
         1800000,
         2000000
     },
 
-    {
+    { 
         2,
         "80m",
         3500000,
         4000000
     },
-    {
+    { 
         3,
         "60-40m",
         5403500,
         7300000
     },
-    {
+    { 
         4,
         "30-20m",
         10100000,
         14350000
     },
-    {
+    { 
         5,
         "17-15m",
         18068000,
         21450000
     },
-    {
+    { 
         6,
         "12-10m",
         24890000,
         29700000
     },
-    {
+    { 
         7,
         "6m",
         50000000,
         54000000
     },
-    {
+    { 
         0,
         "gen",
         0,
@@ -357,7 +374,7 @@ const Genesis::BandFilters_t G59::ms_g59_bandfilters(
     }
 });
 
-G59::G59()
+G59::G59() 
     : Genesis(0x1970)
 {
     mp_cmd = new G59Cmd();
@@ -439,7 +456,7 @@ const Genesis::BandFilters_t G11::ms_g11_bandfilters(
     }
 });
 
-G11::G11()
+G11::G11() 
     : Genesis(0x1971)
 {
     mp_cmd = new G11Cmd();

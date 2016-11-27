@@ -6,7 +6,7 @@
 #define LOG_ERR(...) {fprintf(stderr,__VA_ARGS__);}
 #define LOG_INFO(...) {fprintf(stderr,__VA_ARGS__);}
 
-#define DO_ANNOYING
+//#define DO_ANNOYING
 #ifdef DO_ANNOYING
 #define LOG_ANNOYING(...) {fprintf(stderr,__VA_ARGS__);fflush(stderr);}
 #else
@@ -86,7 +86,7 @@ CmdPacket::tGenesisPacket CmdPacket::GetPacket()
 int CmdPacket::GetCmd(char cmd[])
 {
     if (GENESIS_COMMAND_LENGTH > sizeof cmd)
-    {
+    { 
         return -1;
     }
     memcpy(cmd, (m_packet + GENESIS_COMMAND_OFFSET), GENESIS_COMMAND_LENGTH);
@@ -96,7 +96,7 @@ int CmdPacket::GetCmd(char cmd[])
 int CmdPacket::GetArg1(char arg[])
 {
     if (GENESIS_ARG1_LENGTH > sizeof arg)
-    {
+    { 
         return -1;
     }
     memcpy(arg, (m_packet + GENESIS_ARG1_OFFSET), GENESIS_ARG1_LENGTH);
@@ -106,7 +106,7 @@ int CmdPacket::GetArg1(char arg[])
 int CmdPacket::GetArg2(char arg[])
 {
     if (GENESIS_ARG2_LENGTH > sizeof arg)
-    {
+    { 
         return -1;
     }
     memcpy(arg, (m_packet + GENESIS_ARG2_OFFSET), GENESIS_ARG2_LENGTH);
@@ -148,7 +148,7 @@ bool CmdPacket::operator==(const CmdPacket &other) const
     return result;
 }
 
-bool CmdPacket::operator!=(const CmdPacket &other) const
+bool CmdPacket::operator!=(const CmdPacket &other) const 
 {
     return !(*this == other);
 }
